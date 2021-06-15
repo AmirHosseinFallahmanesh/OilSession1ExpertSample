@@ -27,7 +27,7 @@ namespace School.Domain
         {
             StudentId = Guid.NewGuid();
         }
-        public Guid StudentId { get;private  set; }
+        public Guid StudentId { get;  set; }
 
         public string Name { get; set; }
         public string SurName { get; set; }

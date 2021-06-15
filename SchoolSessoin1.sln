@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "School.Contract", "School.C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "School.Infrastrucure.File", "School.Infrastrucure.File\School.Infrastrucure.File.csproj", "{03C3ECA0-B2D4-4302-AC3E-92F2CC445ECD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "School.Infrastrucure.XML", "School.Infrastrucure.XML\School.Infrastrucure.XML.csproj", "{7AB2B2B5-D165-4251-9016-6308E34096D1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{03C3ECA0-B2D4-4302-AC3E-92F2CC445ECD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{03C3ECA0-B2D4-4302-AC3E-92F2CC445ECD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{03C3ECA0-B2D4-4302-AC3E-92F2CC445ECD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AB2B2B5-D165-4251-9016-6308E34096D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AB2B2B5-D165-4251-9016-6308E34096D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AB2B2B5-D165-4251-9016-6308E34096D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AB2B2B5-D165-4251-9016-6308E34096D1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

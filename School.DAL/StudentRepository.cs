@@ -1,6 +1,7 @@
 ﻿using School.Contract;
 using School.Domain;
 using School.Infrastrucure.File;
+using School.Infrastrucure.XML;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +15,7 @@ namespace School.DAL
         IStudentPersist contex;
         public StudentRepository()
         {
-            contex = new FileContext();
+            contex = new XMLFileConetxt();
         }
         public List<Student> GetStudents()
         {

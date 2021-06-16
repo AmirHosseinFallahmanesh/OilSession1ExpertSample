@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1010B5DB-3912-4B9B-9019-8F6FB49000D6}</ProjectGuid>
+    <ProjectGuid>{9B2C7E85-55FD-4D57-BE57-E5321B09D067}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>School.DAL</RootNamespace>
-    <AssemblyName>School.DAL</AssemblyName>
+    <RootNamespace>School.Infrastrucure.EF</RootNamespace>
+    <AssemblyName>School.Infrastrucure.EF</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -48,34 +48,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="StudentRepository.cs" />
+    <Compile Include="SchoolContext.cs" />
+    <Compile Include="Migrations\202106160717280_create.cs" />
+    <Compile Include="Migrations\202106160717280_create.Designer.cs">
+      <DependentUpon>202106160717280_create.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\School.Contract\School.Contract.csproj">
-      <Project>{29610A90-31B8-4909-9EA7-BD2B1D27D285}</Project>
-      <Name>School.Contract</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\School.Domain\School.Domain.csproj">
-      <Project>{D8855A15-39A4-4ADE-B269-95C61D0FF7EA}</Project>
-      <Name>School.Domain</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\School.Infrastrucure.EF\School.Infrastrucure.EF.csproj">
-      <Project>{9B2C7E85-55FD-4D57-BE57-E5321B09D067}</Project>
-      <Name>School.Infrastrucure.EF</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\School.Infrastrucure.File\School.Infrastrucure.File.csproj">
-      <Project>{03C3ECA0-B2D4-4302-AC3E-92F2CC445ECD}</Project>
-      <Name>School.Infrastrucure.File</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\School.Infrastrucure.XML\School.Infrastrucure.XML.csproj">
-      <Project>{7AB2B2B5-D165-4251-9016-6308E34096D1}</Project>
-      <Name>School.Infrastrucure.XML</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\School.Domain\School.Domain.csproj">
+      <Project>{D8855A15-39A4-4ADE-B269-95C61D0FF7EA}</Project>
+      <Name>School.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202106160717280_create.resx">
+      <DependentUpon>202106160717280_create.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

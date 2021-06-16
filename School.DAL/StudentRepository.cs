@@ -1,5 +1,6 @@
 ﻿using School.Contract;
 using School.Domain;
+using School.Infrastrucure.EF;
 using School.Infrastrucure.File;
 using School.Infrastrucure.XML;
 using System;
@@ -12,14 +13,14 @@ namespace School.DAL
 {
     public class StudentRepository
     {
-        IStudentPersist contex;
+        SchoolContext contex;
         public StudentRepository()
         {
-            contex = new XMLFileConetxt();
+            contex = new SchoolContext();
         }
         public List<Student> GetStudents()
         {
-            return contex.GetAllStudents(); 
+            return contex.Students.ToList();
         }
 
         public void AddStudent(string name,string surname,int age )
@@ -30,7 +31,9 @@ namespace School.DAL
                 Name = name,
                 SurName = surname
             };
-            contex.AddStudent(student);
+            contex.Students.Add(student);
+            contex.SaveChanges();
+
         }
     }
 }
